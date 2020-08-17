@@ -1,16 +1,18 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import Layout from "../components/Layout";
+import { Heading, Link } from "@chakra-ui/core";
 
 const AboutPage = () => (
+  // <Flex flexDirection="column" alignItems="center">
+
   <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
+    <Heading as="h1">About</Heading>
     <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
+    <NextLink href="/" passHref>
+      <Link>Go home</Link>
+    </NextLink>
   </Layout>
+  // </Flex>
 );
 
 export default AboutPage;
